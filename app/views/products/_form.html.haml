@@ -10,14 +10,19 @@
   .field
     = f.label :name
     = f.text_field :name
-  = f.fields_for :images do |image|
-    - unless image.object.image.blank?
-      = image_tag image.object.image.to_s, height:'100', width: '100'
-      = image.hidden_field :id, value: image.object.id
-      = image.hidden_field :_destroy, value: ""
-    = image.file_field :image
-    -# - else
-    -#   = image.file_field :image
+  .images
+    = f.fields_for :images do |image|
+      - unless image.object.image.blank?
+        .image
+          = image_tag image.object.image.to_s, id: :img_prev, height:'100', width: '100'
+          .input
+            = image.hidden_field :id, value: image.object.id
+            = image.hidden_field :_destroy, value: ""
+      - else
+        .new_input
+          = image.file_field :image, class: :user_img
+
+
 
   .action
     = f.submit

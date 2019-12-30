@@ -1,5 +1,13 @@
 # README
 
+## What
+1. 画像アップロード即時プレビュー機能を実施
+    1. アップロードと同時にプレビュー生成
+    1. 画像の下に"削除ボタン"が付与された状態で生成される *** *今回は削除機能の実装なし***
+
+## Why
+* メルカリ画像編集機能の細分化
+
 ## gem list
 * pry-rails
 * jquery-rail https://github.com/rails/jquery-rails
@@ -20,24 +28,11 @@ rails g uploader images
 ```
 mount_uploader :image, ImagesUploader
 ```
-* 画像のアップロードテスト
-
-## What
-1. fields_forを用いた画像の編集
-    1. Edit画面表示時に、productに紐づいたimage(画像)を表示
-    1. Edit画面に表示されたimageの変更
-1. fields_forを用いた画像の削除
-    1. オプション "allow_destroy"を付与
-    1. params[:_destroy]をinputにhiddenで持たせる
-    1. [:_destroy]の値が"1"になっていたら、データ送信時に該当データを削除
-
-
-## Why
-* メルカリ画像編集機能の細分化
 
 ## 参考記事
-* [前回: fields_forとcarrierwave用いた画像の保存](https://github.com/ItsukiIshizuka/sample_create_image)
-* [fields_forの上手な使い方](https://qiita.com/kouuuki/items/5daf2b5f34273d8457f7)
-* [accepts_nested_attributes_forのオプション"allow_destroy"の使いかた](https://qiita.com/NateRive/items/be35c1a52aef8fd0d355)
-* [accepts_nested_attributes_for時の子テーブルのバリデーション掛け方](https://stackoverflow.com/questions/37622669/accepts-nested-attributes-for-with-validations-and-using-find-or-create-by)
-
+* [jQueryでcssプロパティを動的に変化](https://qiita.com/kazTera/items/ab5dd9fb5b2579b25c4d)
+* [CarrierWaveでアップロード画像の即時プレビュー](https://kurose.me/carrierwave-preview/)
+### jQuery
+* [onload](https://techacademy.jp/magazine/15558)
+* [readAsDataURL](https://lab.syncer.jp/Web/API_Interface/Reference/IDL/FileReader/readAsDataURL/)
+* 

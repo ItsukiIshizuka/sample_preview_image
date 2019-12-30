@@ -75,7 +75,7 @@ class ProductsController < ApplicationController
     end
 
     def update_product_params
-      params.require(:product).permit(:name, images_attributes: [:image, :id, :_destroy])
+      params.require(:product).permit(:name, images_attributes: [:image, :id, :_destroy, :image_cache])
     end
 
 end
