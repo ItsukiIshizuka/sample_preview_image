@@ -1,6 +1,7 @@
 # README
 
 ## What
+1. 画像の複数枚投稿
 1. 画像アップロード即時プレビュー機能を実施
     1. アップロードと同時にプレビュー生成
     1. 画像の下に"削除ボタン"が付与された状態で生成される *** *今回は削除機能の実装なし***
@@ -35,4 +36,3 @@ mount_uploader :image, ImagesUploader
 ### jQuery
 * [onload](https://techacademy.jp/magazine/15558)
 * [readAsDataURL](https://lab.syncer.jp/Web/API_Interface/Reference/IDL/FileReader/readAsDataURL/)
-* 

@@ -25,7 +25,7 @@ $(function(){
 
   $(document).on("change", ".user_img", function(){
     $(this).css('display', 'none');
-    input_length = $(this).parent().parent().children().length;
+    input_length = $(this).parent().parent().children().lengh;
     readURL(this);
   });
 //ここまで画像プレビュー
